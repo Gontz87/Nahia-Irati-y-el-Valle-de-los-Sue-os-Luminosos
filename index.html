@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahia e Irati - El Cuento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quicksand:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FEECE2;
+        }
+
+        .title {
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        .page {
+            transform: translateX(100%);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .page.active {
+            transform: translateX(0%);
+        }
+
+        .hidden-page {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center text-gray-800">
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Header -->
+        <div class="text-center bg-pink-400 text-white py-4">
+            <h1 class="text-3xl title">Nahia, Irati y el Valle de los Sueños Luminosos</h1>
+        </div>
+
+        <!-- Story Pages -->
+        <div id="storyContainer" class="relative overflow-hidden">
+            <div class="page active" id="page-1">
+                <img src="1.jpeg" alt="Page 1" class="w-full">
+                <p class="text-lg p-4">Nahia e Irati estaban en su cuarto, un lugar lleno de juguetes y libros. Nahia coloreaba un dibujo de un unicornio, mientras Irati ordenaba las casitas de muñecas de su hamster imaginario. De repente, algo brillante apareció en el aire. Una pequeña luz danzaba frente a ellas como si tuviera vida propia. <br><br>—¡Es una estrella! —exclamó Nahia. La estrella flotó suavemente y habló: —¡Hola! Me llamo Luma. Estoy perdida y necesito ayuda para volver al Valle de los Sueños Luminosos. Allí viven unicornios y criaturas mágicas. ¿Me ayudáis? Nahia e Irati se miraron emocionadas. ¡Claro que sí! Empezaba una gran aventura.</p>
+            </div>
+            <div class="page" id="page-2">
+                <img src="2.jpeg" alt="Page 2" class="w-full">
+                <p class="text-lg p-4">Luma las guió fuera de casa hacia un bosque mágico. El sendero estaba lleno de flores que brillaban en diferentes colores, como pequeñas luces. Todo era tan bonito que las niñas apenas podían contener la emoción. <br><br>—¿Adónde vamos ahora? —preguntó Irati. —Debemos cruzar un puente de nubes, pero no es un puente normal. Solo se puede cruzar con imaginación y confianza —explicó Luma. Nahia e Irati siguieron el camino, maravillándose con los colores y los sonidos mágicos del bosque. Todo parecía un sueño.</p>
+            </div>
+            <div class="page" id="page-3">
+                <img src="3.jpeg" alt="Page 3" class="w-full">
+                <p class="text-lg p-4">Cuando llegaron al puente de nubes, un unicornio apareció frente a ellas. Era blanco con un cuerno dorado y una crin de colores arcoíris que parecía flotar con el viento. <br><br>—Hola, soy Lía, el unicornio guardián. Puedo ayudaros a cruzar. Las nubes son suaves, pero si confiáis en vuestra imaginación, serán tan firmes como el suelo —explicó Lía. Al principio, las niñas dudaron, pero siguieron los pasos de Lía. ¡Y funcionó! Las nubes eran tan seguras como el suelo de su cuarto. Cruzaron el puente riendo y jugando, mientras el unicornio las guiaba con paciencia.</p>
+            </div>
+            <div class="page" id="page-4">
+                <img src="4.jpeg" alt="Page 4" class="w-full">
+                <p class="text-lg p-4">Del otro lado del puente, el paisaje cambió. Un campo lleno de caramelos gigantes se extendía ante ellas. En medio del campo, encontraron a Gabi, un hamster con orejas de gato. <br><br>—¡Hola! Buscáis la llave mágica, ¿verdad? Está escondida entre los caramelos, pero no es fácil de encontrar —dijo Gabi. Con su ayuda, Nahia e Irati empezaron a buscar. Examinaron piruletas gigantes, caramelos de cristal y nubes de azúcar. Finalmente, Nahia encontró un caramelo que brillaba más que los demás. Dentro, estaba la llave dorada que necesitaban.</p>
+            </div>
+            <div class="page hidden-page" id="page-5">
+                <img src="5.jpeg" alt="Page 5" class="w-full">
+                <p class="text-lg p-4">Con la llave dorada en sus manos, Nahia e Irati se acercaron a una gran puerta hecha de luz. Luma giró la llave y la puerta se abrió, revelando un paisaje increíble. <br><br>Había unicornios de todos los colores, casas flotantes, y un río que brillaba como un arcoíris. Gabi saltó emocionado mientras las criaturas mágicas les daban la bienvenida. <br><br>—Nahia e Irati, habéis sido valientes y creativas. Por eso, os nombramos guardianas honorarias del Valle de los Sueños Luminosos —dijo Luma, poniéndoles pequeñas coronas de flores. Las niñas no podían estar más felices.</p>
+            </div>
+            <div class="page hidden-page" id="page-6">
+                <img src="6.jpeg" alt="Page 6" class="w-full">
+                <p class="text-lg p-4">Al final de la aventura, Luma les dijo que era hora de volver a casa. La estrellita se despidió y voló hacia el cielo, dejando un rastro brillante. <br><br>Cuando Nahia e Irati despertaron en su cuarto, todo parecía un sueño. Pero en la ventana había una flor luminosa, como las del Valle de los Sueños Luminosos. La miraron con una sonrisa, sabiendo que su aventura había sido real. Esa noche, soñaron con unicornios, caramelos y un valle lleno de magia.</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center bg-pink-300 text-white py-3 px-6">
+            <button id="prevButton" class="bg-white text-pink-400 font-bold px-4 py-2 rounded shadow hover:bg-pink-100 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                ← Anterior
+            </button>
+            <span id="pageIndicator" class="text-xl font-bold">Página 1 / 6</span>
+            <button id="nextButton" class="bg-white text-pink-400 font-bold px-4 py-2 rounded shadow hover:bg-pink-100 disabled:opacity-50 disabled:cursor-not-allowed">
+                Siguiente →
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.page');
+        const nextButton = document.getElementById('nextButton');
+        const prevButton = document.getElementById('prevButton');
+        const pageIndicator = document.getElementById('pageIndicator');
+
+        let currentPage = 0;
+
+        function updateNavigation() {
+            pages.forEach((page, index) => {
+                if (index === currentPage) {
+                    page.classList.add('active');
+                    page.classList.remove('hidden-page');
+                } else {
+                    page.classList.remove('active');
+                    page.classList.add('hidden-page');
+                }
+            });
+
+            pageIndicator.textContent = `Página ${currentPage + 1} / ${pages.length}`;
+            prevButton.disabled = currentPage === 0;
+            nextButton.disabled = currentPage === pages.length - 1;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                updateNavigation();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updateNavigation();
+            }
+        });
+
+        updateNavigation();
+    </script>
+</body>
+
+</html>
+
